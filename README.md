@@ -1,14 +1,14 @@
 # Expressões Matemáticas
 
 ## :memo: Descrição
-O proejto converte expressões matemáticas infixas para posfixas
-Uma expressão infixa é expressão como conhecmos, por exemplo: a+b*c
-Uma expressão posfixa não depende da ordem de prioridade ou parenteses, por exemplo: abc*+
+O projeto converte expressões matemáticas infixas para posfixas
+Uma expressão infixa é expressão como conhecmos, por exemplo: a+b* c
+Uma expressão posfixa não depende da ordem de prioridade ou parenteses, por exemplo: abc* +
 
 A expressão posfixa ela compara as duas variáveis anteriores ao operador e realiza a operação, por exemplo: bc* == b * c
-No exemplo: a+b*c, para pos fixa fica abc*+. Ele realiza primeiro b*c e depois soma com a.
+No exemplo: a+b* c, para pos fixa fica abc* +. Ele realiza primeiro b*c e depois soma com a.
 
-## :wrench: Tecnologias utilizadas
+## :wrench: Tecnologias utilizadas 
 * Java
 
 ## :dart: Status do projeto

@@ -19,3 +19,7 @@ No exemplo: a+b*c, para pos fixa fica abc*+. Ele realiza primeiro b*c e depois s
 * **Prioridade:** Retorna as prioridades das operações (+, -, *, / e ^)
 * **ConverterPosfixa:** Recebe como parâmetro a expressão infixa no formato de String. Ela usa um algoritimo para converter a expressão de infixa para posfixa
 * **AtribuirValores:** Recebe como parâmetros a expressão posfixa em String e o vetor dos valores. Ela retorna o resultado da expressão a partir da expressão posfixa
+
+## Autores
+* Henrique Yuji - https://github.com/henrique340
+* André Guimarães - https://github.com/AndreGuimaraes01

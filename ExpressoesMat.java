@@ -1,82 +1,12 @@
 // Importanto biblioteca Scanner
 import java.util.Scanner;
 
-// Classe Minha Pilha
-class MinhaPilhaInteiro {
-    private int tamanhoMaximo;
-    private int[] listaPilha;
-    private int topo;
-
-    public MinhaPilhaInteiro(int tamanho) {
-        tamanhoMaximo = tamanho;
-        listaPilha = new int[tamanhoMaximo];
-        topo = -1;
-    }
-
-    public void push(int valor) {
-        listaPilha[++topo] = valor;
-    }
-
-    public int pop() {
-        if (isEmpty()) {
-            System.out.println("A pilha está vazia");
-            return 0; // Retorna 0 ou outro valor padrão se a pilha estiver vazia
-        }
-        return listaPilha[topo--];
-    }
-
-    public boolean isEmpty() {
-        return topo == -1;
-    }
-}
-
-class MinhaPilha {
-  private int tamanhoMaximo;
-  private char[] listaPilha;
-  private int topo;
-
-  // Método contrutor
-  public MinhaPilha(int tamanho) {
-    tamanhoMaximo = tamanho;
-    listaPilha = new char[tamanhoMaximo];
-    topo = -1;
-  }
-
-  // Funções da pilha
-  public void push(char c) {
-    listaPilha[++topo] = c;
-  }
-
-  public char pop() {
-    if (isEmpty()) {
-      System.out.println("A pilha está vazia");
-    }
-    return listaPilha[topo--];
-  }
-
-  public boolean isEmpty() {
-    return topo == -1;
-  }
-
-  public char topo() {
-    return listaPilha[topo];
-  }
-
-  public char ultimoOperador() {
-    for (int i = topo; i >= 0; i--) {
-      if (listaPilha[i] == '+' || listaPilha[i] == '-' || listaPilha[i] == '/' || listaPilha[i] == '*'
-          || listaPilha[i] == '^') {
-        return listaPilha[i];
-      }
-    }
-    return 0;
-  }
-}
+// Importando classes
+import pilhas.*;
 
 // Função Principal
 public class ExpressoesMat {
   public static void main(String[] args) {
-
     // Inicialização das Strings e listas utilizadas
     String expressaoInfixa = "";
     String expressaoPosfixa = "";
@@ -192,7 +122,7 @@ public class ExpressoesMat {
       }
       // Se o caractere for um operando
       else if (caractere == '*' || caractere == '/' || caractere == '^' || caractere == '+' || caractere == '-') {
-        while (!pilha.isEmpty() && prioridade(caractere) <= prioridade(pilha.ultimoOperador())) {
+        while (!pilha.isEmpty() && prioridade(caractere) <= prioridade(pilha.topo())) {
           expressaoPosfixa.append(pilha.pop());
         }
         pilha.push(caractere);
